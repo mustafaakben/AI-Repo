@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tools Dashboard</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Elon University Generative AI Toolbox</h1>
+            <p class="subtitle">Discover our collection of powerful generative AI tools and custom chatbots designed for Elon University staff, faculty, and students to enhance productivity, support research, and elevate teaching and learning experiences across campus.</p>
+        </header>
+
+        <div class="search-filter">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search tools...">
+            </div>
+            <div class="category-filter">
+                <select id="category-select" aria-label="Filter by category">
+                    <!-- Categories will be populated dynamically from tools.js -->
+                </select>
+            </div>
+        </div>
+
+        <div class="tools-grid" id="tools-container">
+            <!-- Tools will be inserted here by JavaScript -->
+        </div>
+
+        <div id="empty-state" class="empty-state">
+            <p>No tools found matching your criteria.</p>
+            <button id="clear-filters">Clear filters</button>
+        </div>
+    </div>
+
+    <script src="tools.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

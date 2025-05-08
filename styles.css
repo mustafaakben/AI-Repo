@@ -1,0 +1,251 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #718096;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Search and Filter Styles */
+.search-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 640px) {
+    .search-filter {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 100%;
+}
+
+@media (min-width: 640px) {
+    .search-box {
+        max-width: 300px;
+    }
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #272c8b;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+}
+
+.category-filter select {
+    padding: 10px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 0.95rem;
+    outline: none;
+    min-width: 180px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.category-filter select:focus {
+    border-color: #4c51bf;
+}
+
+/* Tools Grid Styles */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+@media (min-width: 640px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tool Card Styles */
+.tool-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tool-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tool-icon {
+    background-color: #f8f9fa;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.tool-icon i {
+    font-size: 28px;
+}
+
+.tool-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #2d3748;
+}
+
+.tool-description {
+    text-align: center;
+    color: #718096;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.tool-link {
+    margin-top: auto;
+    padding: 0 20px 20px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    background-color: #73000a ;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b59a57;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 0;
+    display: none;
+}
+
+.empty-state p {
+    color: #718096;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+#clear-filters {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#clear-filters:hover {
+    background-color: #cbd5e0;
+}
+
+/* Tool Colors */
+.color-indigo i { color: #4c51bf; }
+.color-blue i { color: #3182ce; }
+.color-green i { color: #38a169; }
+.color-red i { color: #e53e3e; }
+.color-purple i { color: #805ad5; }
+.color-yellow i { color: #d69e2e; }
+.color-gray i { color: #4a5568; }
+.color-orange i { color: #dd6b20; }
+.color-teal i { color: #319795; }
+.color-pink i { color: #d53f8c; }
+.color-violet i { color: #6b46c1; }
+.color-cyan i { color: #0bc5ea; }
