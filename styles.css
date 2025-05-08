@@ -10,7 +10,47 @@ body {
     background-color: #f5f7fa;
     color: #333;
     line-height: 1.6;
-    padding: 20px;
+    padding: 0;
+}
+
+/* Elon Banner */
+.elon-banner {
+    background-color: #73000a;
+    color: white;
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.elon-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+.logo-link {
+    display: block;
+}
+
+.elon-logo-img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.banner-title {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: left;
+    color: white;
 }
 
 .container {
@@ -45,6 +85,12 @@ h1 {
     flex-direction: column;
     gap: 16px;
     margin-bottom: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #f5f7fa;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 @media (min-width: 640px) {
